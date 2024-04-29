@@ -1,11 +1,9 @@
-
-<h1>Books</h1>
-@for (book of books; track $index)
-{
-    <div>
-        <h2>{{ book.title }}</h2>
-        <p>{{ book.author }}</p>
-    </div>
-} @empty {
-    No books found!
-}
+<section class="container">
+  <h1>Books</h1>
+  @for (book of books; track $index) {
+  <div>
+    <h2>{{ book.title }}</h2>
+    <p>{{ book.author }}</p>
+  </div>
+  } @empty { No books found! }
+</section>
