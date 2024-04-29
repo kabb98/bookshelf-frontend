@@ -1,5 +1,11 @@
 
-<div *ngFor="let book of books">
-    <h2>{{ book.title }}</h2>
-    <p>{{ book.author }}</p>
-</div>
+<h1>Books</h1>
+@for (book of books; track $index)
+{
+    <div>
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.author }}</p>
+    </div>
+} @empty {
+    No books found!
+}
