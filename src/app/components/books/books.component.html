@@ -1,9 +1,14 @@
 <section class="container">
-  <h1>Books</h1>
-  @for (book of books; track $index) {
-  <div>
-    <h2>{{ book.title }}</h2>
-    <p>{{ book.author }}</p>
+  <h1>Mis Libros</h1>
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let book of books">
+      <div class="card">
+        <img class="card-img-top" [src]="book.cover" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text">{{ book.author }}</p>
+        </div>
+      </div>
+    </div>
   </div>
-  } @empty { No books found! }
 </section>
